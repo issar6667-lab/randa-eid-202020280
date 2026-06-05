@@ -1,0 +1,22 @@
+DECLARE
+    TODAY DATE := SYSDATE;
+    TOMORROW TODAY%TYPE;
+BEGIN
+    TOMORROW := TODAY + 1;
+
+    DBMS_OUTPUT.PUT_LINE('Hello World');
+    DBMS_OUTPUT.PUT_LINE('TODAY = ' || TO_CHAR(TODAY,'DD-MON-YYYY'));
+    DBMS_OUTPUT.PUT_LINE('TOMORROW = ' || TO_CHAR(TOMORROW,'DD-MON-YYYY'));
+END;
+/
+
+DECLARE
+    my_date DATE := SYSDATE;
+    v_last_day DATE;
+BEGIN
+    v_last_day := LAST_DAY(my_date);
+
+    DBMS_OUTPUT.PUT_LINE(TO_CHAR(my_date,'Month DD, YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Last Day = ' || TO_CHAR(v_last_day,'DD-MON-YYYY'));
+END;
+/

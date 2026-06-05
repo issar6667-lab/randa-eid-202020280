@@ -1,0 +1,10 @@
+CREATE TABLE countries (
+    country_name VARCHAR2(50),
+    median_age NUMBER(6,2)
+);
+
+INSERT INTO countries VALUES ('Japan', 49.00);
+INSERT INTO countries VALUES ('Jordan', 24.10);
+INSERT INTO countries VALUES ('Canada', 41.70);
+
+COMMIT;
